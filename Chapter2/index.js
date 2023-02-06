@@ -15,6 +15,16 @@ console.log("I will be printed first")
 fs.writeFile(path.join(__dirname, 'files', 'writeMe.txt'),'Content To Be Written In File', (err) => {     //Instead of hard coding path name, use path module
     if(err) throw err;
     console.log('File Write Complete');
+
+    fs.appendFile(path.join(__dirname, 'files', 'writeMe.txt'),'Updated File With New Content', (err) => {     //Instead of hard coding path name, use path module
+        if(err) throw err;
+        console.log('File Update Complete');
+
+    fs.rename(path.join(__dirname, 'files', 'writeMe.txt'), path.join(__dirname, 'files', 'renamedWriteMe.txt'), (err) => {     //Instead of hard coding path name, use path module
+        if(err) throw err;
+        console.log('File Renamed Complete');
+    })
+    })
 })
 
 console.log("I will be printed second")

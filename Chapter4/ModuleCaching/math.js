@@ -25,6 +25,12 @@ module.exports = {
     subtract
 }
 
+// This will break the reference between module.exports and exports as they both point to same memory address
+// exports = {
+//     add,
+//     subtract
+// }
+
 
 // Pattern 4
 
